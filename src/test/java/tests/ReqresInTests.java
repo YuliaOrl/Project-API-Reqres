@@ -21,8 +21,8 @@ import static specs.Specs.*;
 public class ReqresInTests {
 
     @Test
-    @Tags({@Tag("api"), @Tag("high")})
-    @Severity(SeverityLevel.NORMAL)
+    @Tags({@Tag("api"), @Tag("high"), @Tag("critical")})
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Позитивная проверка регистрации пользователя")
     void checkRegisterSuccessful() {
         AtomicReference<RegLogResponseModel> response = new AtomicReference();
@@ -51,8 +51,8 @@ public class ReqresInTests {
     }
 
     @Test
-    @Tags({@Tag("api"), @Tag("high")})
-    @Severity(SeverityLevel.NORMAL)
+    @Tags({@Tag("api"), @Tag("high"), @Tag("critical")})
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Позитивная проверка авторизации пользователя")
     void checkLoginSuccessful() {
         AtomicReference<RegLogResponseModel> response = new AtomicReference();
@@ -78,7 +78,7 @@ public class ReqresInTests {
     }
 
     @Test
-    @Tags({@Tag("api"), @Tag("high")})
+    @Tags({@Tag("api"), @Tag("high"), @Tag("normal")})
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка получения информации по пользователю")
     void checkGetSingleUserTest() {
@@ -109,8 +109,8 @@ public class ReqresInTests {
     }
 
     @Test
-    @Tags({@Tag("api"), @Tag("high")})
-    @Severity(SeverityLevel.NORMAL)
+    @Tags({@Tag("api"), @Tag("high"), @Tag("critical")})
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Тест на создание имени и работы пользователя")
     void checkPostCreateTest() {
         AtomicReference<JobResponseModel> response = new AtomicReference();
@@ -138,8 +138,8 @@ public class ReqresInTests {
     }
 
     @Test
-    @Tags({@Tag("api"), @Tag("high")})
-    @Severity(SeverityLevel.NORMAL)
+    @Tags({@Tag("api"), @Tag("high"), @Tag("critical")})
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Негативная проверка создания имени и работы пользователя")
     void checkNegativePostCreateTest() {
         step("Отправка некорректного запроса и проверка статуса кода в ответе", () -> {
@@ -153,8 +153,8 @@ public class ReqresInTests {
     }
 
     @Test
-    @Tags({@Tag("api"), @Tag("high")})
-    @Severity(SeverityLevel.NORMAL)
+    @Tags({@Tag("api"), @Tag("high"), @Tag("critical")})
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Тест на редактирование имени и работы пользователя")
     void checkPutUpdateTest() {
         AtomicReference<JobResponseModel> response = new AtomicReference();
@@ -182,8 +182,8 @@ public class ReqresInTests {
     }
 
     @Test
-    @Tags({@Tag("api"), @Tag("high")})
-    @Severity(SeverityLevel.NORMAL)
+    @Tags({@Tag("api"), @Tag("high"), @Tag("critical")})
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Тест на удаление пользователя")
     void checkDeleteTest() {
         step("Отправка запроса на удаление пользователя и проверка статуса кода в ответе", () -> {
