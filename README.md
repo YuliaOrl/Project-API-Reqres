@@ -14,9 +14,8 @@
 <p align="center">
 <img width="6%" title="Java" src="images/logo/Java.svg">
 <img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
-<img width="6%" title="Allure Report" src="images/logo/AllureTestOps.svg">
+<img width="6%" title="Allure TestOps" src="images/logo/AllureTestOps.svg">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">
-<img width="6%" title="Selenide" src="images/logo/Selenide.svg">
 <img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
 <img width="6%" title="Gradle" src="images/logo/Gradle.svg">
 <img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
@@ -27,7 +26,7 @@
 </p>
 
 Автотесты для REST API написаны на <code>Java</code> с использованием <code>Gradle</code> и <code>JUnit 5</code>.
-Для API-тестов используется библиотека Rest-Assured, модели Lombok и спецификации.
+Для API тестов используется библиотека Rest-Assured, модели Lombok и спецификации.
 Сборка в <code>Jenkins</code> реализована с формированием Allure-отчета и отправкой уведомления с результатами тестирования в <code>Telegram</code> после завершения прохождения тестов.
 
 Allure-отчет включает в себя:

@@ -2,6 +2,8 @@ package tests;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import models.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -18,8 +20,9 @@ import static specs.Specs.*;
 @DisplayName("API тесты для сайта Reqres.in")
 public class ReqresInTests {
 
-    @Tags({@Tag("api"), @Tag("critical")})
     @Test
+    @Tags({@Tag("api"), @Tag("high")})
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Позитивная проверка регистрации пользователя")
     void checkRegisterSuccessful() {
         AtomicReference<RegLogResponseModel> response = new AtomicReference();
@@ -47,8 +50,9 @@ public class ReqresInTests {
         });
     }
 
-    @Tags({@Tag("api"), @Tag("critical")})
     @Test
+    @Tags({@Tag("api"), @Tag("high")})
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Позитивная проверка авторизации пользователя")
     void checkLoginSuccessful() {
         AtomicReference<RegLogResponseModel> response = new AtomicReference();
@@ -73,8 +77,9 @@ public class ReqresInTests {
             assertThat(response.get().getToken()).isEqualTo("QpwL5tke4Pnpja7X4"));
     }
 
-    @Tags({@Tag("api"), @Tag("critical")})
     @Test
+    @Tags({@Tag("api"), @Tag("high")})
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка получения информации по пользователю")
     void checkGetSingleUserTest() {
         AtomicReference<SingleResponseModel> response = new AtomicReference();
@@ -103,8 +108,9 @@ public class ReqresInTests {
         });
     }
 
-    @Tags({@Tag("api"), @Tag("critical")})
     @Test
+    @Tags({@Tag("api"), @Tag("high")})
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тест на создание имени и работы пользователя")
     void checkPostCreateTest() {
         AtomicReference<JobResponseModel> response = new AtomicReference();
@@ -131,8 +137,9 @@ public class ReqresInTests {
         });
     }
 
-    @Tags({@Tag("api"), @Tag("critical")})
     @Test
+    @Tags({@Tag("api"), @Tag("high")})
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Негативная проверка создания имени и работы пользователя")
     void checkNegativePostCreateTest() {
         step("Отправка некорректного запроса и проверка статуса кода в ответе", () -> {
@@ -145,8 +152,9 @@ public class ReqresInTests {
         });
     }
 
-    @Tags({@Tag("api"), @Tag("critical")})
     @Test
+    @Tags({@Tag("api"), @Tag("high")})
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тест на редактирование имени и работы пользователя")
     void checkPutUpdateTest() {
         AtomicReference<JobResponseModel> response = new AtomicReference();
@@ -173,8 +181,9 @@ public class ReqresInTests {
         });
     }
 
-    @Tags({@Tag("api"), @Tag("critical")})
     @Test
+    @Tags({@Tag("api"), @Tag("high")})
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тест на удаление пользователя")
     void checkDeleteTest() {
         step("Отправка запроса на удаление пользователя и проверка статуса кода в ответе", () -> {
