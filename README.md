@@ -49,7 +49,7 @@ gradle clean test
 <img title="Jenkins Build" src="images/screenshots/jenkinsBuild.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure_Report.svg"> Allure-отчет
+## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/AllureReport.svg"> Allure-отчет
 ### <a target="_blank" href="https://jenkins.autotests.cloud/job/Yulia%20Orlova%20Project%20auto%20testing%20API%20Reqres.in/5/allure/">*Overview*</a>
 
 <p align="center">
