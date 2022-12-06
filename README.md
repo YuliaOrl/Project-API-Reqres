@@ -56,7 +56,7 @@ gradle clean test
 <img title="Allure Overview" src="images/screenshots/allureReportMain.png">
 </p>
 
-### *Результат прохождения параметризованных тестов с описанием  и шагами выполнения*
+### *Результат прохождения тестов с шагами выполнения*
 
 <p align="center">
 <img title="Test Results in Alure" src="images/screenshots/allureReportTests.png">
