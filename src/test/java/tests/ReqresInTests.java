@@ -30,7 +30,7 @@ public class ReqresInTests {
                 .build();
 
         RegLogResponseModel responseModel = step("Регистрация пользователя", () ->
-                given().spec(requestSpecJson)
+                given().spec(requestSpec)
                         .body(requestBody)
                         .when()
                         .post("/api/register")
@@ -55,7 +55,7 @@ public class ReqresInTests {
                 .build();
 
         RegLogResponseModel responseModel = step("Авторизация пользователя", () ->
-                given().spec(requestSpecJson)
+                given().spec(requestSpec)
                         .body(requestBody)
                         .when()
                         .post("/api/login")
@@ -73,7 +73,7 @@ public class ReqresInTests {
     @DisplayName("Проверка получения информации по пользователю")
     void checkGetSingleUserTest() {
         SingleResponseModel responseModel = step("Получение данных пользователя", () ->
-                given().spec(requestSpecJson)
+                given().spec(requestSpec)
                         .when()
                         .get("/api/users/2")
                         .then()
@@ -104,7 +104,7 @@ public class ReqresInTests {
                 .build();
 
         JobResponseModel responseModel = step("Создание имени и работы пользователя", () ->
-                given().spec(requestSpecJson)
+                given().spec(requestSpec)
                         .body(requestBody)
                         .when()
                         .post("/api/users")
@@ -129,7 +129,7 @@ public class ReqresInTests {
                 .build();
 
         JobResponseModel responseModel = step("Редактирование имени и работы пользователя", () ->
-                given().spec(requestSpecJson)
+                given().spec(requestSpec)
                         .body(requestBody)
                         .when()
                         .put("/api/users/2")
@@ -149,7 +149,7 @@ public class ReqresInTests {
     @DisplayName("Тест на удаление пользователя")
     void checkDeleteTest() {
         step("Отправка запроса на удаление пользователя и проверка статуса кода в ответе", () ->
-                given().spec(requestSpecJson)
+                given().spec(requestSpec)
                         .when()
                         .delete("/api/users/2")
                         .then()

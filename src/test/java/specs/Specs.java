@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.with;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class Specs {
-    public static RequestSpecification requestSpecJson = with()
+    public static RequestSpecification requestSpec = with()
             .filter(withCustomTemplates())
             .baseUri("https://reqres.in")
             .log().uri()
